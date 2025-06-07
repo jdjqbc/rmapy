@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rmapy"
+version = "0.3.1"
+description = "Remarkable Cloud Api Client"
+readme = "README.md"
+requires-python = ">=3.6"
+license = {text = "MIT"}
+authors = [
+    {name = "Stijn Van Campenhout", email = "subutux@gmail.com"}
+]
+keywords = ["remarkable", "rmapy", "cloud", "paper", "tablet"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "requests",
+    "pyaml==19.4.1",
+    "urllib3>=1.26.5",
+]
+
+[project.optional-dependencies]
+doc = [
+    "sphinx==2.2.0",
+    "sphinx-autodoc-typehints==1.8.0",
+    "guzzle-sphinx-theme==0.7.11",
+]
+dev = [
+    "sphinx==2.2.0",
+    "sphinx-autodoc-typehints==1.8.0",
+    "guzzle-sphinx-theme==0.7.11",
+]
+
+[project.urls]
+Homepage = "https://github.com/subutux/rmapy"
+"Bug Reports" = "https://github.com/subutux/rmapy/issues"
+"Source" = "https://github.com/subutux/rmapy/"
+"Say Thanks!" = "https://www.paypal.me/subutux"
+"Funding" = "https://donate.pypi.org"
+
+[tool.setuptools.packages.find]
+exclude = ["contrib", "docs", "tests"]
+
+[tool.setuptools.package-data]
+"*" = ["*.txt", "*.md"]
+
+[tool.uv]
+dev-dependencies = [
+    "sphinx==2.2.0",
+    "sphinx-autodoc-typehints==1.8.0",
+    "guzzle-sphinx-theme==0.7.11",
+]
+
+[tool.uv.sources]
